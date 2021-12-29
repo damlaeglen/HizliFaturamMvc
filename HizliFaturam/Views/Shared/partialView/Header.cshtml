@@ -1,0 +1,38 @@
+﻿@model HizliFaturam.Models.dto.header
+@{
+
+    var controller = Model.Controller;
+    var action = Model.Action;
+ }
+<header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container d-flex align-items-center">
+
+        <div class="logo mr-auto">
+            <h1 class="text-light"><a href="@Url.Action(" Index", "Home")" style="color: #010483 !important;">Hızlı e-Faturam</a></h1>
+            <!-- <img src="/assets/img/LogoHiz2.png" alt="ücretsiz e-fatura" style="width:100%" /> -->
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li class="@(controller=="Home" && action == "Index" ? "active":"")"><a href="@Url.Action("Index","Home")">Anasayfa</a></li>
+                <li class="@(controller=="Home" && action == "Ozellikler" ? "active":"")"><a href="@Url.Action("Ozellikler","Home")">Özellikler</a></li>
+                <li class="@(controller=="Home" && action == "Kampanyalar" ? "active":"")"><a href="@Url.Action("Kampanyalar","Home")">Kampanyalar</a></liclass>
+                <li class="@(controller=="Home" && action == "Index" ? "active":"")"><a href="@Url.Action("Index","Home")">S.S.S.</a></li>
+                <li class="@(controller=="Home" && action == "Blog" ? "active":"")"><a href="@Url.Action("Blog","Home")">Blog</a></li>
+                <li class="drop-down">
+                    <a href="@Url.Action(" Iletisim","Home")">İletişim</a>
+                    <ul>
+                        <li><a href="@Url.Action(" Iletisim","Home")">İletişim</a></li>
+                        <li><a href="@Url.Action(" Destek","Home")">Destek</a></li>
+                    </ul>
+                </li>
+                <div class="text-center text-lg-right" style="float: left;">
+                    <a href="/setup/HizliFaturam.msi" class="btn-get-started scrollto" id="navbar-buton">Ücretsiz Kullan</a>
+                </div>
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </div>
+</header>
